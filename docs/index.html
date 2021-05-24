@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Microwave Calculator</title>
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Microwave Calculator</h1>
+
+		<form id="form">
+			<section>
+				<h2>
+					<label for="packaging-duration">The packaging says</label>
+				</h2>
+
+				<input type="tel" id="packaging-duration" placeholder="Time" autofocus>
+				<label for="packaging-wattage">at</label>
+				<input type="number" id="packaging-wattage" placeholder="Wattage">
+				<label for="packaging-wattage">Watts</label>
+			</section>
+
+			<section>
+				<h2>
+					<label for="microwave-wattage">My microwave is</label>
+				</h2>
+
+				<input type="number" id="microwave-wattage">
+				<label for="microwave-wattage" placeholder="Wattage">Watts</label>
+			</section>
+
+			<div class="result">
+				<h2>
+					Microwave your food for
+					<span id="result">00:00</span>
+				</h2>
+			</div>
+		</form>
+	</div>
+
+	<script src="/js/app.js" defer async></script>
+</body>
+</html>
