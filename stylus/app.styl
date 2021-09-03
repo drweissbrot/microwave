@@ -1,8 +1,11 @@
 @require '~normalize.css/normalize.css'
 
+$white = #c2
+$purple = #5c19bb
+
 html {
 	background #21
-	color #ae
+	color $white
 	font-size 62.5%
 }
 
@@ -10,7 +13,7 @@ body {
 	display flex
 	justify-content center
 
-	font 1.6rem/1.5em 'Source Sans Pro', 'Ubuntu', 'Calibri', sans-serif
+	font 1.6rem/1.5em 'Source Sans Pro', 'Ubuntu', 'Segoe UI Variable', 'Segoe UI', system-ui, ui-sans-serif, 'Calibri', sans-serif
 }
 
 .container {
@@ -29,13 +32,13 @@ label {
 input {
 	padding 1rem 2rem
 	background transparent
-	border .2rem solid #ae
+	border .2rem solid $white
 	color inherit
 	transition border-color .3s ease
 
 	&:focus {
 		outline none
-		border-color #5c19bb
+		border-color $purple
 	}
 
 	&::placeholder {
@@ -50,5 +53,5 @@ h1 {
 
 .result {
 	margin-top 4rem
-	border-top .2rem solid #5c19bb
+	border-top .2rem solid $purple
 }

@@ -8,10 +8,10 @@
 		"production": "mix --production"
 	},
 	"devDependencies": {
-		"laravel-mix": "^6.0.19",
+		"laravel-mix": "^6.0.29",
 		"normalize.css": "^8.0.1",
-		"postcss": "^8.3.0",
+		"postcss": "^8.3.6",
 		"stylus": "^0.54.8",
-		"stylus-loader": "^6.0.0"
+		"stylus-loader": "^6.1.0"
 	}
 }
