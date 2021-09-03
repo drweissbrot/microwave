@@ -5,10 +5,10 @@ const microwaveWattage = form.querySelector('#microwave-wattage')
 const result = form.querySelector('#result')
 
 const parseTimeColon = (time) => {
-	const segments = time.split(':')
+	let segments = time.trim().split(/\D+/)
 	if (segments.length > 2) return 0
 
-	return Number(segments[0]) * 60 + Number(segments[1])
+	return Number(segments[0]) * 60 + Number(segments[1] || 0)
 }
 
 const parseTimeLong = (time) => {
@@ -22,7 +22,7 @@ const parseTimeLong = (time) => {
 }
 
 const parseTime = (time) => {
-	if (time.includes(':')) return parseTimeColon(time)
+	if (time.match(/^[\d\s.:+]+$/)) return parseTimeColon(time)
 	if (time.includes('m') || time.includes('s')) return parseTimeLong(time)
 
 	return time
@@ -55,7 +55,7 @@ form.addEventListener('submit', (e) => e.preventDefault())
 
 packagingDuration.addEventListener('blur', () => {
 	packagingDuration.value = formatSeconds(
-		parseTime(packagingDuration.value)
+		parseTime(packagingDuration.value.trim())
 	)
 })
 
